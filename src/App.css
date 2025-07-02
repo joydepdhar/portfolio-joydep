@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@keyframes fade-in-down {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in-delay {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fade-in-slow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in-down { animation: fade-in-down 0.7s ease-out both; }
+.animate-fade-in-up { animation: fade-in-up 0.7s ease-out both; }
+.animate-fade-in-delay { animation: fade-in-delay 1s ease-out both; }
+.animate-fade-in-slow { animation: fade-in-slow 1.2s ease-in-out both; }
