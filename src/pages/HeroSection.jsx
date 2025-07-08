@@ -1,99 +1,93 @@
-import React from 'react';
-import { FaDownload, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import React from "react";
+import { FaDownload, FaLinkedin, FaGithub } from "react-icons/fa";
 
-function HeroSection() {
+export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gradient-to-br from-[#1B1F3B] via-[#0F172A] to-[#2A2F5A] text-white px-6 sm:px-12 flex items-center justify-center mt-16 pt-4"
+      className="relative min-h-screen flex items-center justify-center px-6 sm:px-12 bg-gradient-to-br from-[#0F172A] via-[#1F2937] to-[#1E293B] text-white mt-16 pt-4"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
     >
-      {/* Background Grid Overlay */}
-      <div className="absolute inset-0 bg-[url('/grid.png')] bg-cover opacity-5 z-0" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent z-0" />
+      {/* Background overlays */}
+      <div className="absolute inset-0 bg-[url('/grid.png')] bg-cover opacity-5 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 to-transparent pointer-events-none" />
 
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16 z-10">
-        {/* LEFT — Intro */}
-        <motion.div
-          className="space-y-6"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-2xl uppercase text-yellow-400 tracking-wider font-bold ">
+      <div className="relative max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center z-10">
+        {/* Text Content */}
+        <div className="space-y-8 max-w-xl">
+          <p className="text-xl uppercase tracking-widest font-semibold text-cyan-400">
             👋 Hello, I’m
           </p>
 
-          <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-300 to-pink-400">
-            Joydep Dhar<span className='text-purple-600'>.</span>
+          <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
+            <span className="text-white">JOYDEP</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              DHAR
+            </span>
           </h1>
 
-          <h2 className="text-xl sm:text-2xl font-semibold text-gray-300">
-            Full Stack Developer | Python, Django, React
+          <h2 className="text-xl sm:text-2xl font-semibold text-amber-500">
+            Full Stack Developer | Python · Django · React
           </h2>
 
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl">
-            I specialize in building scalable, clean, and modern web applications using <span className="text-yellow-400 font-medium">Python (Django)</span>, <span className="text-yellow-400 font-medium">C# (.NET)</span>, and <span className="text-yellow-400 font-medium">React</span>. Passionate about problem-solving, clean architecture, and lifelong learning.
+          <p className="text-gray-400 text-base sm:text-lg mt-2">
+            I build secure, scalable, and intuitive web applications. Whether it's robust APIs with{" "}
+            <span className="text-cyan-400 font-medium">Django</span>, interactive UIs with{" "}
+            <span className="text-cyan-400 font-medium">React</span>, or backend engineering in{" "}
+            <span className="text-cyan-400 font-medium">C# (.NET)</span>—I turn ideas into impact.
           </p>
 
-          <ul className="text-gray-400 text-sm sm:text-base list-disc list-inside space-y-1">
-            <li>🔧 Backend APIs, Auth, and Database Design</li>
-            <li>🎯 Frontend UI/UX with React + Tailwind</li>
-            <li>🤝 Team Player, Curious Learner, Tech Explorer</li>
+          <ul className="list-disc list-inside text-gray-400 text-sm sm:text-base space-y-2 mt-4 max-w-md">
+            <li>🔒 Secure backend APIs & clean architecture</li>
+            <li>⚡ Lightning-fast frontend with Tailwind + React</li>
+            <li>☕ Runs on coffee, clean code & curiosity</li>
           </ul>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+          <div className="flex flex-wrap gap-4 pt-6">
             <a
               href="/JoydepDharCV.pdf"
               download
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full text-md font-semibold bg-yellow-400 text-[#1B1F3B] shadow-md hover:bg-yellow-300 hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-sm font-semibold shadow-md hover:brightness-110 hover:scale-105 transition duration-300"
             >
-              <FaDownload /> Download CV
+              <FaDownload size={18} /> Download CV
             </a>
 
             <a
-              href="https://www.linkedin.com/in/joydep-dhar-15a8451aa" // Update this link if needed
+              href="https://www.linkedin.com/in/joydep-dhar-15a8451aa"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1B1F3B] border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-[#1B1F3B] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-[#0F172A] transition duration-300 text-sm font-semibold"
             >
-              <FaLinkedin /> LinkedIn
+              <FaLinkedin size={18} /> LinkedIn
             </a>
 
             <a
-              href="https://github.com/joydepdhar" // Update this link if needed
+              href="https://github.com/joydepdhar"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1B1F3B] border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-[#1B1F3B] transition-all duration-300"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-cyan-400 text-cyan-300 hover:bg-cyan-400 hover:text-[#0F172A] transition duration-300 text-sm font-semibold"
             >
-              <FaGithub /> GitHub
+              <FaGithub size={18} /> GitHub
             </a>
           </div>
-        </motion.div>
+        </div>
 
-        {/* RIGHT — Profile Image */}
-        <motion.div
-          className="flex justify-center"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full p-2 bg-gradient-to-tr from-yellow-400 via-yellow-300 to-pink-400 shadow-2xl hover:scale-105 transition-transform duration-500">
-            <div className="rounded-full overflow-hidden w-full h-full bg-[#1B1F3B]">
+        {/* Profile Image */}
+        <div className="flex justify-center">
+          <div className="relative w-80 h-80 sm:w-96 sm:h-96 rounded-full p-2 bg-gradient-to-tr from-cyan-500 via-indigo-500 to-transparent shadow-xl hover:scale-105 transition-transform duration-500">
+            <div className="rounded-full overflow-hidden w-full h-full bg-[#1F2937]">
               <img
                 src="/firstImage.jpg"
                 alt="Joydep Dhar"
-                className="w-full h-full object-cover"
+                className="object-cover w-full h-full"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 }
-
-export default HeroSection;

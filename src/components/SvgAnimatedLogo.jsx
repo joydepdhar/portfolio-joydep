@@ -1,79 +1,53 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function SvgAnimatedLogo() {
   return (
-    <svg
-      width="100%"
-      height="80"
-      viewBox="0 0 300 60"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="Joydep Dhar Logo"
-    >
-      <defs>
-        <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#60A5FA" />
-          <stop offset="100%" stopColor="#2563EB" />
-        </linearGradient>
-        <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#34D399" />
-          <stop offset="100%" stopColor="#059669" />
-        </linearGradient>
-        <linearGradient id="yellowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#FBBF24" />
-          <stop offset="100%" stopColor="#D97706" />
-        </linearGradient>
-      </defs>
+    <Link to="/" className="flex items-center space-x-3 group">
+      {/* Animated SVG Icon */}
+      <svg
+        className="w-8 h-8 text-sky-500 group-hover:text-yellow-400 transition-all duration-500"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="45"
+          stroke="currentColor"
+          strokeWidth="6"
+          strokeDasharray="280"
+          strokeDashoffset="0"
+        >
+          <animate
+            attributeName="stroke-dashoffset"
+            values="280;0;280"
+            dur="4s"
+            repeatCount="indefinite"
+          />
+        </circle>
+        <text
+          x="50%"
+          y="55%"
+          textAnchor="middle"
+          fill="currentColor"
+          fontSize="22"
+          fontFamily="Arial"
+          dy=".3em"
+        >
+          JD
+        </text>
+      </svg>
 
-      <style>{`
-        .char {
-          font: 700 28px 'Segoe UI', sans-serif;
-          opacity: 0;
-          animation: fadeInUp 0.6s ease forwards;
-          cursor: default;
-          transition: transform 0.3s ease, filter 0.3s ease;
-          transform-origin: center bottom;
-        }
-        .char:hover {
-          transform: scale(1.25);
-          filter: drop-shadow(0 0 8px currentColor);
-        }
-
-        .char:nth-of-type(1) { fill: url(#blueGrad); animation-delay: 0s; }
-        .char:nth-of-type(2) { fill: url(#greenGrad); animation-delay: 0.05s; }
-        .char:nth-of-type(3) { fill: url(#yellowGrad); animation-delay: 0.1s; }
-        .char:nth-of-type(4) { fill: url(#blueGrad); animation-delay: 0.15s; }
-        .char:nth-of-type(5) { fill: url(#greenGrad); animation-delay: 0.2s; }
-        .char:nth-of-type(6) { fill: url(#yellowGrad); animation-delay: 0.25s; }
-        .char:nth-of-type(7) { fill: url(#blueGrad); animation-delay: 0.3s; }
-        .char:nth-of-type(8) { fill: url(#greenGrad); animation-delay: 0.35s; }
-        .char:nth-of-type(9) { fill: url(#yellowGrad); animation-delay: 0.4s; }
-        .char:nth-of-type(10) { fill: url(#blueGrad); animation-delay: 0.45s; }
-
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(15px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
-
-      {/* Text characters spaced evenly */}
-      <text x="0" y="40" class="char">J</text>
-      <text x="25" y="40" class="char">o</text>
-      <text x="50" y="40" class="char">y</text>
-      <text x="75" y="40" class="char">d</text>
-      <text x="100" y="40" class="char">e</text>
-      <text x="125" y="40" class="char">p</text>
-      <text x="165" y="40" class="char">D</text>
-      <text x="190" y="40" class="char">h</text>
-      <text x="215" y="40" class="char">a</text>
-      <text x="240" y="40" class="char">r</text>
-    </svg>
+      {/* Logo Text */}
+      <div className="text-2xl font-extrabold tracking-wide text-sky-500 group-hover:text-yellow-400 transition duration-300">
+        <span className="text-slate-900 dark:text-white">JOYDEP</span>
+        <span className="ml-1 bg-gradient-to-r from-sky-400 to-yellow-400 bg-clip-text text-transparent">
+          DHAR
+        </span>
+      </div>
+    </Link>
   );
 }
 

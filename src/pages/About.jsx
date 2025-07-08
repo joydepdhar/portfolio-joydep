@@ -28,20 +28,24 @@ function About() {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <h2 className="text-4xl font-bold text-yellow-400 mb-8 text-center">About Me</h2>
+          <h2 className="text-4xl font-extrabold text-indigo-400 mb-8 text-center tracking-wide">
+            About Me
+          </h2>
           <div className="flex flex-col items-center">
             <img
               src="/images/profile-pic.png"
               alt="Joydep Dhar"
-              className="w-32 h-32 rounded-full border-4 border-yellow-400 shadow-md object-cover mb-4"
+              className="w-32 h-32 rounded-full border-4 border-indigo-400 shadow-md object-cover mb-4"
             />
-            <p className="text-lg text-center text-gray-300 max-w-3xl">
-              Hi, I'm <span className="text-yellow-400 font-semibold">Joydep Dhar</span> — a passionate Full Stack Developer from South Asia. I specialize in building web apps using <span className="text-yellow-400">C# (.NET)</span>, <span className="text-yellow-400">Python (Django)</span>, and <span className="text-yellow-400">React</span>. My focus is on clean architecture, responsive design, and solving real-world problems.
+            <p className="text-lg text-center text-gray-300 max-w-3xl leading-relaxed">
+              Hi, I'm <span className="text-indigo-400 font-semibold">Joydep Dhar</span> — a passionate Full Stack Developer from South Asia.
+              I build modern web apps using <span className="text-indigo-400">C# (.NET)</span>, <span className="text-indigo-400">Python (Django)</span>,
+              and <span className="text-indigo-400">React</span> with a focus on scalable architecture, elegant UX, and real-world solutions.
             </p>
           </div>
         </motion.div>
 
-        {/* Flex Row: Education + Skills */}
+        {/* Education + Skills Row */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -50,9 +54,9 @@ function About() {
           variants={fadeInUp}
           className="flex flex-col md:flex-row gap-8"
         >
-          {/* Education Card */}
-          <div className="bg-[#1E293B] rounded-2xl p-6 flex-1 shadow-lg">
-            <h3 className="text-2xl font-semibold text-yellow-400 mb-4">🎓 Education</h3>
+          {/* Education */}
+          <div className="bg-[#1F2937] rounded-2xl p-6 flex-1 shadow-lg">
+            <h3 className="text-2xl font-semibold text-indigo-400 mb-4">🎓 Education</h3>
             <div className="space-y-4 text-gray-300">
               <div>
                 <p className="font-bold">American International University-Bangladesh</p>
@@ -65,71 +69,56 @@ function About() {
             </div>
           </div>
 
-          {/* Skills Card */}
-          <div className="bg-[#1E293B] rounded-2xl p-6 flex-1 shadow-lg">
-            <h3 className="text-2xl font-semibold text-yellow-400 mb-4">🛠️ Technical Skills</h3>
+          {/* Skills */}
+          <div className="bg-[#1F2937] rounded-2xl p-6 flex-1 shadow-lg">
+            <h3 className="text-2xl font-semibold text-indigo-400 mb-4">🛠️ Technical Skills</h3>
 
             {/* Languages */}
-            <div className="mb-4">
-              <h4 className="text-lg text-yellow-300 mb-1">Languages</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-200">
-                <Skill icon={<SiDotnet />} label="C#" />
-                <Skill icon={<SiPython />} label="Python" />
-                <Skill icon={<SiCplusplus />} label="C++" />
-                <Skill icon={<FaJsSquare />} label="JavaScript" />
-                <Skill icon={<FaTerminal />} label="Bash" />
-              </div>
-            </div>
+            <SkillGroup title="Languages" skills={[
+              { icon: <SiDotnet />, label: 'C#' },
+              { icon: <SiPython />, label: 'Python' },
+              { icon: <SiCplusplus />, label: 'C++' },
+              { icon: <FaJsSquare />, label: 'JavaScript' },
+              { icon: <FaTerminal />, label: 'Bash' },
+            ]} />
 
             {/* Frameworks */}
-            <div className="mb-4">
-              <h4 className="text-lg text-yellow-300 mb-1">Frameworks & Libraries</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-200">
-                <Skill icon={<SiDotnet />} label="ASP.NET" />
-                <Skill icon={<SiDjango />} label="Django" />
-                <Skill icon={<FaReact />} label="React" />
-                <Skill icon={<SiTailwindcss />} label="Tailwind CSS" />
-              </div>
-            </div>
+            <SkillGroup title="Frameworks & Libraries" skills={[
+              { icon: <SiDotnet />, label: 'ASP.NET' },
+              { icon: <SiDjango />, label: 'Django' },
+              { icon: <FaReact />, label: 'React' },
+              { icon: <SiTailwindcss />, label: 'Tailwind CSS' },
+            ]} />
 
             {/* Databases */}
-            <div className="mb-4">
-              <h4 className="text-lg text-yellow-300 mb-1">Databases</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-200">
-                <Skill icon={<SiMysql />} label="MySQL" />
-                <Skill label="SQLite" />
-              </div>
-            </div>
+            <SkillGroup title="Databases" skills={[
+              { icon: <SiMysql />, label: 'MySQL' },
+              { label: 'SQLite' },
+            ]} />
 
             {/* Tools */}
-            <div className="mb-4">
-              <h4 className="text-lg text-yellow-300 mb-1">Tools</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-200">
-                <Skill icon={<FaGitAlt />} label="Git & GitHub" />
-              </div>
-            </div>
+            <SkillGroup title="Tools" skills={[
+              { icon: <FaGitAlt />, label: 'Git & GitHub' },
+            ]} />
 
-            {/* Operating Systems */}
-            <div>
-              <h4 className="text-lg text-yellow-300 mb-1">Operating Systems</h4>
-              <div className="flex flex-wrap gap-4 text-sm text-gray-200">
-                <Skill icon={<FaWindows />} label="Windows" />
-                <Skill icon={<FaLinux />} label="Ubuntu" />
-              </div>
-            </div>
+            {/* OS */}
+            <SkillGroup title="Operating Systems" skills={[
+              { icon: <FaWindows />, label: 'Windows' },
+              { icon: <FaLinux />, label: 'Ubuntu' },
+            ]} />
           </div>
         </motion.div>
 
-        {/* Certifications Card */}
+        {/* Certifications */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           custom={3}
           variants={fadeInUp}
-          className="bg-[#1E293B] rounded-2xl p-6 shadow-lg"
+          className="bg-[#1F2937] rounded-2xl p-6 shadow-lg"
         >
-          <h3 className="text-2xl font-semibold text-yellow-400 mb-4">🏅 Certifications & Awards</h3>
+          <h3 className="text-2xl font-semibold text-indigo-400 mb-4">🏅 Certifications & Awards</h3>
           <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm">
             <li><span className="font-medium">CISCO IT Essentials</span> – Cisco Network Academy</li>
             <li><span className="font-medium">Crash Course on Python</span> – Google (Coursera)</li>
@@ -141,11 +130,25 @@ function About() {
   );
 }
 
-// Reusable skill component
+// Skill Group
+function SkillGroup({ title, skills }) {
+  return (
+    <div className="mb-5">
+      <h4 className="text-lg text-indigo-300 mb-2">{title}</h4>
+      <div className="flex flex-wrap gap-3">
+        {skills.map((skill, idx) => (
+          <Skill key={idx} icon={skill.icon} label={skill.label} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Individual Skill Badge
 function Skill({ icon, label }) {
   return (
-    <span className="flex items-center gap-1 bg-gray-800 px-2 py-1 rounded-lg shadow text-sm">
-      {icon && <span className="text-yellow-300">{icon}</span>}
+    <span className="flex items-center gap-2 bg-gray-800 hover:bg-gray-700 px-3 py-1.5 rounded-lg shadow-sm text-sm transition">
+      {icon && <span className="text-indigo-300">{icon}</span>}
       {label}
     </span>
   );

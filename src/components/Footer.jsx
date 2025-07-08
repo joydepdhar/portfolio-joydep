@@ -15,34 +15,34 @@ function Footer() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="bg-[#0F172A] text-gray-300 py-12 px-6 sm:px-12"
+      className="bg-[#0F172A] text-gray-300 pt-16 pb-10 px-6 sm:px-12 border-t border-gray-700"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
         {/* Contact Info */}
         <div>
-          <h4 className="text-xl font-bold text-yellow-400 mb-4">Contact</h4>
-          <p className="flex items-center gap-3 hover:text-yellow-400 transition duration-300">
-            <FaPhoneAlt /> <span>01793178452</span>
+          <h4 className="text-xl font-bold text-indigo-400 mb-4">📞 Contact</h4>
+          <p className="flex items-center gap-3 hover:text-indigo-300 transition duration-300">
+            <FaPhoneAlt /> <span>+880 1793-178452</span>
           </p>
-          <p className="flex items-center gap-3 hover:text-yellow-400 transition duration-300 mt-2">
+          <p className="flex items-center gap-3 hover:text-indigo-300 transition duration-300 mt-2">
             <FaEnvelope /> <span>joydep.cse.aiub@gmail.com</span>
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h4 className="text-xl font-bold text-yellow-400 mb-4">Quick Links</h4>
+          <h4 className="text-xl font-bold text-indigo-400 mb-4">🔗 Quick Links</h4>
           <ul className="space-y-3">
             {[
               { label: 'Home', id: 'home' },
-              { label: 'Services', id: 'service' },
-              { label: 'Projects', id: 'pastproject' },
+              { label: 'Services', id: 'services' },
+              { label: 'Projects', id: 'projects' },
               { label: 'About', id: 'about' },
             ].map(({ label, id }) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
-                  className="hover:text-yellow-400 transition duration-300"
+                  className="hover:text-indigo-300 transition duration-300"
                 >
                   {label}
                 </a>
@@ -53,14 +53,14 @@ function Footer() {
 
         {/* Social Media */}
         <div>
-          <h4 className="text-xl font-bold text-yellow-400 mb-4">Follow Me</h4>
-          <div className="flex space-x-5 text-2xl">
+          <h4 className="text-xl font-bold text-indigo-400 mb-4">🌐 Follow Me</h4>
+          <div className="flex space-x-6 text-2xl">
             <motion.a
               href="https://github.com/joydepdhar"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
-              className="hover:text-yellow-400 transition"
+              className="hover:text-indigo-300 transition"
             >
               <FaGithub />
             </motion.a>
@@ -69,16 +69,16 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
-              className="hover:text-yellow-400 transition"
+              className="hover:text-indigo-300 transition"
             >
               <FaLinkedin />
             </motion.a>
             <motion.a
-              href="https://facebook.com/joydepdhar" // ✅ Replace with your actual profile URL
+              href="https://facebook.com/joydepdhar"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
-              className="hover:text-yellow-400 transition"
+              className="hover:text-indigo-300 transition"
             >
               <FaFacebook />
             </motion.a>
@@ -86,8 +86,9 @@ function Footer() {
         </div>
       </div>
 
+      {/* Footer Bottom */}
       <div className="text-center mt-12 text-sm text-gray-500">
-        © {new Date().getFullYear()} <span className="text-gray-300">Joydep DhaR</span>. All rights reserved.
+        © {new Date().getFullYear()} <span className="text-gray-300 font-semibold">Joydep Dhar</span>. All rights reserved.
       </div>
     </motion.footer>
   );
