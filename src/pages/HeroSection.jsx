@@ -24,6 +24,7 @@ export default function HeroSection() {
             <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
               DHAR
             </span>
+            <span className="text-black">.</span>
           </h1>
 
           <h2 className="text-xl sm:text-2xl font-semibold text-amber-500">
@@ -48,7 +49,7 @@ export default function HeroSection() {
             <a
               href="/JoydepDharCV.pdf"
               download
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-white text-sm font-semibold shadow-md hover:brightness-110 hover:scale-105 transition duration-300"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-black text-sm font-semibold shadow-md hover:brightness-110 hover:scale-105 transition duration-300"
             >
               <FaDownload size={18} /> Download CV
             </a>
