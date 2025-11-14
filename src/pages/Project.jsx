@@ -3,6 +3,16 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
+    title: 'E-Commerce Website',
+    tech: ['Python', 'Django REST', 'React', 'Cloudinary'],
+    description:
+      'A modern full-stack e-commerce platform with authentication, product management, checkout, and image uploads. Built for scalability.',
+    github: 'https://github.com/joydepdhar/E-Com',
+    image: '/images/AuraEcom.png',
+    liveLink: 'https://e-com-seven-alpha.vercel.app/',
+  },
+  {
+    
     title: 'Todo App',
     tech: ['Python', 'Django'],
     description:
@@ -42,15 +52,7 @@ const projects = [
     github: 'https://github.com/joydepdhar/StoreManagementSystem_FinalProject_ASP.Net',
     image: '/images/BackEndProject.PNG',
   },
-  {
-    title: 'E-Commerce Website',
-    tech: ['Python', 'Django REST', 'React', 'Cloudinary'],
-    description:
-      'A modern full-stack e-commerce platform with authentication, product management, checkout, and image uploads. Built for scalability.',
-    github: 'https://github.com/joydepdhar/E-Com',
-    image: '/images/AuraEcom.png',
-    liveLink: 'https://e-com-seven-alpha.vercel.app/',
-  },
+  
 ];
 
 function Project() {
