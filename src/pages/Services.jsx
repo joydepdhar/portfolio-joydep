@@ -99,7 +99,7 @@ export default function Services() {
               <div className="mt-6 flex items-center justify-between">
                 <a
                   href={`#contact`}
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 text-black font-semibold text-sm shadow-sm hover:shadow-md transition"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full block mt-4 text-center bg-[#7C3AED] text-white py-2 rounded-md font-semibold hover:bg-[#FACC15] hover:text-[#1F2937] transition"
                   aria-label={`${s.title} - ${s.cta}`}
                 >
                   {s.cta}

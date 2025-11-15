@@ -43,7 +43,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center px-4 py-16"
+      className="min-h-screen  bg-[#0F172A] flex items-center justify-center px-4 py-16"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
