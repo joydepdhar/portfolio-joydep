@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-joydep-joydepdhars-projects.vercel.app/sitemap.xml
