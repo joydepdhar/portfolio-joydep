@@ -65,28 +65,32 @@
     rel="stylesheet"
   />
 
-  <!-- Schema.org (Person) -->
+  <!-- Schema.org (Person JSON-LD) -->
   <script type="application/ld+json">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K7VQX8LRJT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-K7VQX8LRJT');
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Joydep Dhar",
+    "url": "https://portfolio-joydep-joydepdhars-projects.vercel.app/",
+    "image": "https://portfolio-joydep-joydepdhars-projects.vercel.app/preview.png",
+    "jobTitle": "ERP & Full Stack Developer",
+    "sameAs": [
+      "https://github.com/joydepdhar",
+      "https://www.linkedin.com/in/joydep-dhar/"
+    ]
+  }
   </script>
 
   <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7VQX8LRJT"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
+    gtag('config', 'G-K7VQX8LRJT');
   </script>
 
+  <!-- Base Styles -->
   <style>
     body {
       margin: 0;
