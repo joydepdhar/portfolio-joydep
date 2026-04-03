@@ -244,7 +244,7 @@ export default function HeroSection() {
             animate="visible"
             className="text-sm text-gray-500"
           >
-            Odoo ERP Developer at{" "}
+            Python Developer at{" "}
             <span className="text-gray-300 font-medium">Zylo, Dhaka</span>
           </motion.p>
 
