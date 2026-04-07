@@ -391,7 +391,7 @@ export default function HeroSection() {
           >
             <div className="rounded-full overflow-hidden w-full h-full bg-[#111827]">
               <img
-                src="/firstImage.jpg"
+                src="/firstImage.png"
                 alt="Joydep Dhar – ERP & Business Automation Developer based in Dhaka"
                 loading="eager"
                 fetchPriority="high"
