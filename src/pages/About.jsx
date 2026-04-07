@@ -199,7 +199,7 @@ export default function About() {
                 Work with me
               </a>
               <a
-                href="/JoydepDhar_CV.pdf"
+                href="/JoydepDharCV.pdf"
                 download
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full
                            border border-white/10 text-gray-300 text-sm font-semibold
